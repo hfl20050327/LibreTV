@@ -22,12 +22,391 @@ const SITE_CONFIG = {
 
 // API站点配置
 const API_SITES = {
-    testSource: {
-        api: 'https://www.example.com/api.php/provide/vod',
-        name: '空内容测试源',
-        adult: true
-    }
-    //ARCHIVE https://telegra.ph/APIs-08-12
+  // 原有测试源
+  testSource: {
+    api: 'https://www.example.com/api.php/provide/vod',
+    name: '空内容测试源',
+    adult: true
+  },
+
+  // 基础资源组
+  hongniu: {
+    api: 'http://hongniuzy2.com/api.php/provide/vod/from/hnm3u8',
+    name: '红牛資源',
+    adult: false
+  },
+  liangzi: {
+    api: 'http://cj.lziapi.com/api.php/provide/vod/from/lzm3u8',
+    name: '量子資源',
+    adult: false
+  },
+  kaifang: {
+    api: 'http://vod-demo.onrender.com/pubdovod.php',
+    name: '開放電影',
+    adult: false
+  },
+  youzhi: {
+    api: 'http://api.1080zyku.com/inc/api.php/provide/vod',
+    name: '优质资源库',
+    adult: false
+  },
+  39ys: {
+    api: 'http://39kan.com/api.php/provide/vod',
+    name: '39影視',
+    adult: false
+  },
+  tiantang: {
+    api: 'http://vipmv.cc/api.php/provide/vod',
+    name: '天堂资源',
+    adult: false
+  },
+  lehuo: {
+    api: 'http://lehootv.com/api.php/provide/vod',
+    name: '乐活影视',
+    adult: false
+  },
+  tangrenjie1: {
+    api: 'http://tangrenjie.tv/api.php/provide/vod',
+    name: '唐人街',
+    adult: false
+  },
+  kudian1: {
+    api: 'http://api.kuapi.cc/api.php/provide/vod',
+    name: '酷点资源',
+    adult: false
+  },
+  wolong: {
+    api: 'http://collect.wolongzyw.com/api.php/provide/vod',
+    name: '卧龙资源',
+    adult: false
+  },
+  kudian2: {
+    api: 'http://kudian10.com/api.php/provide/vod',
+    name: '酷点资源',
+    adult: false
+  },
+  tangrenjie2: {
+    api: 'http://tangrenjie.tv/api.php/provide/vod/at/xm',
+    name: '唐人街',
+    adult: false
+  },
+  senlin: {
+    api: 'http://slapibf.com/api.php/provide/vod',
+    name: '森林资源',
+    adult: false
+  },
+  yingku: {
+    api: 'http://api.ykapi.net/api.php/provide/vod',
+    name: '影库资源网',
+    adult: false
+  },
+  kuaiche: {
+    api: 'http://caiji.kczyapi.com/api.php/provide/vod/from/kcm3u8',
+    name: '快车资源',
+    adult: false
+  },
+  tantan: {
+    api: 'http://apittzy.com/api.php/provide/vod',
+    name: '探探资源',
+    adult: false
+  },
+  shandian1: {
+    api: 'http://sdzyapi.com/api.php/provide/vod/from/sdm3u8',
+    name: '閃電資源',
+    adult: false
+  },
+  jinying: {
+    api: 'http://jyzyapi.com/provide/vod/from/jinyingm3u8',
+    name: '金鹰资源',
+    adult: false
+  },
+  guangsu: {
+    api: 'http://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8',
+    name: '光速资源',
+    adult: false
+  },
+  aosika: {
+    api: 'http://aosikazy.com/api.php/provide/vod',
+    name: '奥斯卡资源网',
+    adult: false
+  },
+  laoya: {
+    api: 'http://api.apilyzy.com/api.php/provide/vod',
+    name: '老鸭资源采集',
+    adult: false
+  },
+  uku1: {
+    api: 'http://api.ukuapi.com/api.php/provide/vod',
+    name: 'U酷资源',
+    adult: false
+  },
+  beidouxing: {
+    api: 'http://m3u8.bdxzyapi.com/api.php/provide/vod',
+    name: '北斗星资源',
+    adult: false
+  },
+  yinghua: {
+    api: 'http://m3u8.apiyhzy.com/api.php/provide/vod',
+    name: '樱花资源网',
+    adult: false
+  },
+  kudian3: {
+    api: 'http://api.kuapi.cc/api.php/provide/vod',
+    name: '酷点资源',
+    adult: false
+  },
+  shandian2: {
+    api: 'http://sdzyapi.com/api.php/provide/vod',
+    name: '闪电资源',
+    adult: false
+  },
+  feisu: {
+    api: 'http://feisuzy.com/api.php/provide/vod',
+    name: '飞速资源',
+    adult: false
+  },
+  kuaitv: {
+    api: 'http://www.kuaibozy.com/api.php/provide/vod',
+    name: '快播资源',
+    adult: false
+  },
+  baidu: {
+    api: 'http://api.apibdzy.com/api.php/provide/vod',
+    name: '百度资源',
+    adult: false
+  },
+  aidan: {
+    api: 'http://lovedan.net/api.php/provide/vod',
+    name: '艾旦影视',
+    adult: false
+  },
+  piaohua: {
+    api: 'http://www.zzrhgg.com/api.php/provide/vod',
+    name: '飘花电影',
+    adult: false
+  },
+  wangmin: {
+    api: 'http://prinevillesda.org/api.php/provide/vod',
+    name: '网民电影',
+    adult: false
+  },
+  siwa: {
+    api: 'http://siwazyw.cc/api.php/provide/vod',
+    name: '丝袜资源',
+    adult: true // 疑似成人内容，标记为true
+  },
+  tiankong: {
+    api: 'http://m3u8.tiankongapi.com/api.php/provide/vod/from/tkm3u8',
+    name: '天空資源',
+    adult: false
+  },
+  haiwaikan1: {
+    api: 'http://haiwaikan.com/api.php/provide/vod',
+    name: '海外看資源',
+    adult: false
+  },
+
+  // 带点播标识的资源
+  haiwaikan2: {
+    api: 'https://haiwaikan.com/api.php/provide/vod/',
+    name: '海外看|点播🪜',
+    adult: false
+  },
+  360: {
+    api: 'https://360zy.com/api.php/provide/vod/',
+    name: '360|点播',
+    adult: false
+  },
+  heimuer: {
+    api: 'https://www.heimuer.tv/api.php/provide/vod',
+    name: '黑木耳|点播',
+    adult: true // 名称可能涉及敏感内容，标记为true
+  },
+  caitong: {
+    api: 'http://ys9.cttv.vip/api.php/provide/vod/',
+    name: '刺桐|点播',
+    adult: false
+  },
+  guanwang: {
+    api: 'http://gwcms.cttv.vip/api.php/provide/vod/',
+    name: '官网|点播',
+    adult: false
+  },
+  yeyu: {
+    api: 'https://yyff.540734621.xyz/api.php/provide/vod/',
+    name: '业余|点播',
+    adult: false
+  },
+  huawei: {
+    api: 'https://hw8.live/api.php/provide/vod/',
+    name: '华为吧|点播',
+    adult: false
+  },
+  xiaohuangren: {
+    api: 'https://iqyi.xiaohuangrentv.com/api.php/provide/vod/',
+    name: '小黄人|点播',
+    adult: false
+  },
+  niuniu: {
+    api: 'https://api.niuniuzy.me/api.php/provide/vod/',
+    name: '牛牛|点播',
+    adult: false
+  },
+  yaya: {
+    api: 'https://cj.yayazy.net/api.php/provide/vod/',
+    name: '丫丫|点播',
+    adult: false
+  },
+  uku2: {
+    api: 'https://api.ukuapi.com/api.php/provide/vod/',
+    name: 'U酷|点播',
+    adult: false
+  },
+  haohua: {
+    api: 'https://hhzyapi.com/api.php/provide/vod',
+    name: '豪华|点播',
+    adult: false
+  },
+  jisu: {
+    api: 'https://jszyapi.com/api.php/provide/vod',
+    name: '极速|点播',
+    adult: false
+  },
+  sijiu: {
+    api: 'https://49zyw.com/api.php/provide/vod/',
+    name: '四九|点播',
+    adult: false
+  },
+  suoni: {
+    api: 'https://suoniapi.com/api.php/provide/vod/',
+    name: '索尼|点播',
+    adult: false
+  },
+  ikun: {
+    api: 'https://ikunzyapi.com/api.php/provide/vod/',
+    name: 'ikun|点播',
+    adult: false
+  },
+  feifan: {
+    api: 'http://cj.ffzyapi.com/api.php/provide/vod/',
+    name: '非凡|点播',
+    adult: false
+  },
+  liangzi2: {
+    api: 'https://cj.lziapi.com/api.php/provide/vod/',
+    name: '量子|点播',
+    adult: false
+  },
+  baofeng: {
+    api: 'https://bfzyapi.com/api.php/provide/vod/',
+    name: '暴风|点播',
+    adult: false
+  },
+  hongniu2: {
+    api: 'https://www.hongniuzy2.com/api.php/provide/vod/',
+    name: '红牛|点播',
+    adult: false
+  },
+  feisu2: {
+    api: 'https://www.feisuzyapi.com/api.php/provide/vod/',
+    name: '飞速|点播',
+    adult: false
+  },
+  kuaikan: {
+    api: 'https://www.kuaikan-api.com/api.php/provide/vod/',
+    name: '快看|点播',
+    adult: false
+  },
+  xiongzhang: {
+    api: 'https://xzcjz.com/api.php/provide/vod/',
+    name: '熊掌|点播',
+    adult: false
+  },
+  kuaiche2: {
+    api: 'https://caiji.kczyapi.com/api.php/provide/vod/from/kcm3u8/',
+    name: '快车|点播',
+    adult: false
+  },
+  shandian3: {
+    api: 'http://sdzyapi.com/api.php/provide/vod/',
+    name: '闪电|点播',
+    adult: false
+  },
+  yinghua2: {
+    api: 'https://m3u8.apiyhzy.com/api.php/provide/vod/',
+    name: '樱花|点播',
+    adult: false
+  },
+  wolong2: {
+    api: 'https://collect.wolongzyw.com/api.php/provide/vod/',
+    name: '卧龙|点播',
+    adult: false
+  },
+  piaohua2: {
+    api: 'http://www.ahjiuman.com/api.php/provide/vod/at/json',
+    name: '飘花|点播',
+    adult: false
+  },
+  tianyi: {
+    api: 'https://www.911ysw.top/tianyi.php/provide/vod/',
+    name: '天翼|点播',
+    adult: false
+  },
+  huya: {
+    api: 'https://www.huyaapi.com/api.php/provide/vod/',
+    name: '虎牙|点播',
+    adult: false
+  },
+  baidu2: {
+    api: 'https://api.apibdzy.com/api.php/provide/vod/',
+    name: '百度|点播',
+    adult: false
+  },
+  piaoling: {
+    api: 'https://p2100.net/api.php/provide/vod/',
+    name: '飘零|点播',
+    adult: false
+  },
+  wujin: {
+    api: 'https://api.wujinapi.com/api.php/provide/vod/',
+    name: '无尽|点播',
+    adult: false
+  },
+  subo: {
+    api: 'https://subocaiji.com/api.php/provide/vod/',
+    name: '速博|点播',
+    adult: false
+  },
+  modu: {
+    api: 'https://caiji.moduapi.cc/api.php/provide/vod/',
+    name: '魔都|点播',
+    adult: false
+  },
+  zuida: {
+    api: 'http://zuidazy.me/api.php/provide/vod/',
+    name: '最大|点播',
+    adult: false
+  },
+  qihu: {
+    api: 'https://caiji.qhzyapi.com/api.php/provide/vod/',
+    name: '奇虎|点播',
+    adult: false
+  },
+  huohu: {
+    api: 'https://hhzyapi.com/api.php/provide/vod/',
+    name: '火狐|点播',
+    adult: false
+  },
+  xinlang: {
+    api: 'https://api.xinlangapi.com/xinlangapi.php/provide/vod/',
+    name: '新浪|点播',
+    adult: false
+  },
+  kuaiyun: {
+    api: 'https://www.kuaiyunzy.com/api.php/provide/vod/',
+    name: '快云|点播',
+    adult: false
+  }
 };
 
 // 定义合并方法
